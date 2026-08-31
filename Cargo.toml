@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "crates/companion-types",
+    "crates/companion-render",
+]
+resolver = "2"
