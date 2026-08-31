@@ -1,0 +1,7 @@
+[package]
+name = "companion-cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+companion-types = { path = "../companion-types" }

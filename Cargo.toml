@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/companion-types",
+    "crates/telemetry-daemon",
+    "crates/companion-core",
+    "crates/companion-render",
+    "crates/companion-cli",
+]
