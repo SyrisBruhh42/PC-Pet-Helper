@@ -2,5 +2,8 @@
 members = [
     "crates/companion-types",
     "crates/companion-core",
+    "crates/companion-render",
+    "crates/telemetry-daemon",
+    "crates/companion-cli",
 ]
 resolver = "2"

@@ -1,0 +1,16 @@
+use telemetry_daemon::{run_daemon, TelemetryDaemonConfig};
+use tracing::info;
+use tracing_subscriber::EnvFilter;
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
+    let env_filter = EnvFilter::try_from_default_env().unwrap_or_else(|_| EnvFilter::new("info"));
+
+    tracing_subscriber::fmt()
+        .with_env_filter(env_filter)
+        .init();
+
+    info!("Starting Desktop Pet Telemetry Daemon");
+    let config = TelemetryDaemonConfig::default();
+    run_daemon(config).await
+}

@@ -1,0 +1,16 @@
+[Unit]
+Description=KDE Plasma Desktop Companion Daemon & Engine
+PartOf=graphical-session.target
+After=plasma-workspace.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/desktop-pet start
+Restart=on-failure
+RestartSec=3s
+Environment=WAYLAND_DISPLAY=wayland-0
+Environment=XDG_CURRENT_DESKTOP=KDE
+Environment=QT_QPA_PLATFORM=wayland
+
+[Install]
+WantedBy=plasma-workspace.target

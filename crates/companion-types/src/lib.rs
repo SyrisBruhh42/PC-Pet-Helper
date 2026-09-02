@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 #[serde(tag = "type", content = "payload")]
 pub enum TelemetryEvent {
     CpuUsage(f32),
-    IdleTime(u32), // Idle seconds
+    IdleTime(u32),
     BatteryLevel(Option<u8>),
     ActiveWindow {
         class: String,
@@ -20,7 +20,7 @@ pub enum TelemetryEvent {
     },
 }
 
-#[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq, Eq, Hash)]
 pub enum PetState {
     Idle,
     Walking,
@@ -57,4 +57,26 @@ pub struct RenderFrameState {
     pub vitals: VitalsVector,
     pub dialogue: Option<String>,
     pub timestamp_ms: u64,
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_telemetry_event_serialization() {
+        let cpu_event = TelemetryEvent::CpuUsage(45.2);
+        let json = serde_json::to_string(&cpu_event).unwrap();
+        assert_eq!(json, r#"{"type":"CpuUsage","payload":45.2}"#);
+
+        let dev_commit = TelemetryEvent::DevCommit {
+            repo: "my-repo".to_string(),
+            hash: "1234567".to_string(),
+        };
+        let commit_json = serde_json::to_string(&dev_commit).unwrap();
+        assert_eq!(
+            commit_json,
+            r#"{"type":"DevCommit","payload":{"repo":"my-repo","hash":"1234567"}}"#
+        );
+    }
 }

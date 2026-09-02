@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+
+cd "${REPO_ROOT}"
+
+echo "Building Desktop Pet workspace..."
+cargo build --workspace
+
+echo "Starting Desktop Pet orchestrator in dev mode..."
+cargo run -p desktop-pet -- start
