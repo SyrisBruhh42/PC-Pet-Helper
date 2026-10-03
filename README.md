@@ -1,3 +1,15 @@
+# PC-Pet-Helper — desktop companion candidate
+
+## Current direction and evidence — 2026-10-03
+
+GitHub metadata observed on 2026-10-03 at 15:43 UTC reports this repository **unarchived**, at `6390a841351dd8c676f2f4e998d2509a0639932c` on `jules-companion-core-impl-11879245625704920277`. The current direction considers a native pet as a candidate primary LFS interface. This repository is retained candidate material; that direction does not establish it as the selected or qualified implementation.
+
+The September 14 no-adoption evaluation below remains historical evidence about that prototype, not the current repository archive flag. Preserve its failures, missing privacy/accessibility/recovery evidence, component references and branches. Reassess claims against current source before reuse; do not infer installation, service startup or credential access from renewed interest.
+
+The remaining product decision is which implementation and supported desktop experience will own the outcome. Runtime, input safety, asset rights, accessibility, packaging and recovery need actual acceptance evidence. Accurate documentation can be updated while those decisions and checks remain open.
+
+## Preserved September 14 evaluation — historical record
+
 # PC-Pet-Helper — archived integration prototype
 
 > **Do not install or treat this repository as a qualified desktop companion.**
@@ -35,3 +47,13 @@ Any revival needs one chosen product home, a privacy and accessibility contract,
 - Other component heads: `a46a2422930b5c6b47fce23aa706d69a9503e404`, `ec0e08efd9bdb776e85cb9df3717bbba39d0ef22`, and `b5b6f25d59f13485b49eb325beb796e95d1777fa`
 - Private mirror and verified bundle retained through at least `2026-10-14T15:15:37Z`
 - GitHub branches and PR discussion remain preserved; no component branch is deleted by this archive action.
+
+<!-- lfs-alignment:begin v1 -->
+## LFS alignment
+
+Project role: Native desktop-pet prototype under renewed companion consideration.
+
+This project keeps its own purpose and required features while sharing useful LFS practices: clear ownership, reusable capabilities, scoped access, evidence-based validation and recoverable work. Adopting these practices does not make this repository a deployed LFS service.
+
+Use this README and local project documentation for scope, setup and status. Contributor guidance is in [AGENTS.md](AGENTS.md). A policy update is not proof of tested or delivered functionality.
+<!-- lfs-alignment:end -->
