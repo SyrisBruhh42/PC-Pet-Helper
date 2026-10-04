@@ -1,5 +1,20 @@
 # PC-Pet-Helper — desktop companion candidate
 
+## Source baseline — 2026-10-04
+
+The canonical source candidate is the current core lineage, based on
+`5d6e686339f61688be6fc7c1801302d325a5aac4`. It contains a standalone
+state/vitals engine, SQLite persistence, and local state broadcast. It does not
+yet display a desktop pet. The aggregate and component branches remain
+preserved as unqualified feature material; they have not been merged into this
+candidate. See [source decision and acceptance gaps](docs/SOURCE_BASELINE.md).
+
+For the source checks, install the pinned Rust toolchain from
+`rust-toolchain.toml`, then run `cargo fmt --all -- --check`,
+`cargo build --workspace --locked`, and `cargo test --workspace --locked`.
+The same checks are defined in GitHub Actions. Passing them qualifies the core
+source only; native desktop behavior and installation remain open.
+
 ## Current direction and evidence — 2026-10-03
 
 GitHub metadata observed on 2026-10-03 at 15:43 UTC reports this repository **unarchived**, at `6390a841351dd8c676f2f4e998d2509a0639932c` on `jules-companion-core-impl-11879245625704920277`. The current direction considers a native pet as a candidate primary LFS interface. This repository is retained candidate material; that direction does not establish it as the selected or qualified implementation.
