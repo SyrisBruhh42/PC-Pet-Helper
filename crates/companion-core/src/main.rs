@@ -1,8 +1,7 @@
 use companion_core::db::Database;
 use companion_core::fsm::FsmState;
 use companion_core::ipc::{
-    spawn_telemetry_client, start_state_broadcast_server, STATE_SOCKET_PATH,
-    TELEMETRY_SOCKET_PATH,
+    spawn_telemetry_client, start_state_broadcast_server, STATE_SOCKET_PATH, TELEMETRY_SOCKET_PATH,
 };
 use companion_core::vitals::VitalsEngine;
 use companion_types::{RenderFrameState, TelemetryEvent};
@@ -87,9 +86,12 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         // DB autosave every 30s or immediately on state transition
         if state_changed || time_since_last_autosave >= Duration::from_secs(30) {
             time_since_last_autosave = Duration::ZERO;
-            if let Err(err) =
-                db.save_pet_state(fsm.current_state, vitals_engine.vector(), None, timestamp_ms)
-            {
+            if let Err(err) = db.save_pet_state(
+                fsm.current_state,
+                vitals_engine.vector(),
+                None,
+                timestamp_ms,
+            ) {
                 warn!("Failed to save pet state: {err}");
             }
         }

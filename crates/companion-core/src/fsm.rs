@@ -54,9 +54,9 @@ impl FsmState {
             TelemetryEvent::ActiveWindow { class, title } => {
                 let class_lower = class.to_lowercase();
                 let title_lower = title.to_lowercase();
-                self.is_ide_active = IDE_KEYWORDS.iter().any(|kw| {
-                    class_lower.contains(kw) || title_lower.contains(kw)
-                });
+                self.is_ide_active = IDE_KEYWORDS
+                    .iter()
+                    .any(|kw| class_lower.contains(kw) || title_lower.contains(kw));
             }
             TelemetryEvent::DevCommit { .. } => {
                 if self.current_state != PetState::Celebrating {

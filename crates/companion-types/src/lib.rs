@@ -6,18 +6,9 @@ pub enum TelemetryEvent {
     CpuUsage(f32),
     IdleTime(u32), // Idle seconds
     BatteryLevel(Option<u8>),
-    ActiveWindow {
-        class: String,
-        title: String,
-    },
-    DevCommit {
-        repo: String,
-        hash: String,
-    },
-    UserClick {
-        x: i32,
-        y: i32,
-    },
+    ActiveWindow { class: String, title: String },
+    DevCommit { repo: String, hash: String },
+    UserClick { x: i32, y: i32 },
 }
 
 #[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq, Eq)]
