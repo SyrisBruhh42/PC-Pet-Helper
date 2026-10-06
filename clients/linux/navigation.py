@@ -7,6 +7,7 @@ from types import MappingProxyType
 ORIGIN = "https://lewisfamilysystems.com"
 DESTINATIONS = MappingProxyType({
     "hub": ("Family Hub", ORIGIN),
+    "tools": ("LFS tools", ORIGIN + "/tools"),
     "calendar": ("Calendar", ORIGIN + "/calendar"),
     "workspace": ("Notes & Projects", ORIGIN + "/workspace"),
     "connections": ("Connections", ORIGIN + "/settings/connections"),

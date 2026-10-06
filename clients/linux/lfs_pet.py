@@ -82,6 +82,11 @@ class PetShell(Gtk.Window):
         self.hub_button.connect("clicked", self.open_hub)
         outer.pack_start(self.hub_button, False, False, 0)
 
+        self.tools_button = Gtk.Button(label=DESTINATIONS["tools"][0])
+        self.tools_button.set_tooltip_text("Open LFS tools in your browser")
+        self.tools_button.connect("clicked", self.open_shortcut, "tools")
+        outer.pack_start(self.tools_button, False, False, 0)
+
         # Native labeled controls remain usable without understanding the drawing.
         self.shortcuts = Gtk.Expander.new_with_mnemonic("Family _tools")
         links = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=5)

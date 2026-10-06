@@ -55,6 +55,11 @@ license clearance, universal portability or production acceptance.
 - Activate the pet picture or **Open Family Hub** to open the exact HTTPS origin.
   The pet picture has a descriptive accessible name; the labeled button is the
   full fallback when the drawing is unhelpful.
+- Activate the labeled **LFS tools** shortcut for the fixed
+  <https://lewisfamilysystems.com/tools> destination. This opens the separate LFS
+  platform manager in the browser; the pet does not become that manager. The new
+  `/tools` page is separately owned source work under development, not confirmed
+  live availability. Browser handoff alone proves no page, sign-in or tool access.
 - Expand **Family tools** for **Calendar** (`/calendar`), **Notes & Projects**
   (`/workspace`) and **Connections** (`/settings/connections`). Destinations are
   fixed same-origin routes, not arbitrary input URLs.
@@ -84,7 +89,7 @@ python3 -m py_compile clients/linux/lfs_pet.py clients/linux/navigation.py clien
 python3 clients/linux/lfs_pet.py --smoke-test
 ```
 
-The contract check uses a fake launcher: four exact routes, handoff versus
+The contract check uses a fake launcher: five exact routes, handoff versus
 failure messaging, retained fallback address and rejection of an unknown route.
 It opens no browser and proves no native interaction or authentication journey.
 The smoke switch displays only this widget, reports whether GTK mapped it and
@@ -130,3 +135,26 @@ Stop this increment if it cannot display on the chosen desktop, its route
 disagrees with Main, launch failures are hidden, access requires copying
 credentials, outside-window input is intercepted, or integrating a donor would
 resume an independently held lane.
+
+
+## Fixed platform-manager shortcut source increment
+
+The2026-10-06 bounded shortcut change is based on exact PC-Pet Main
+`4a68bffbe67568bad8c19f40fd2bf490458abf3d` in the isolated
+`lfs-pet-manager-20261006` checkout. It adds only fixed navigation key `tools`
+and a directly labeled native **LFS tools** button, reusing the existing browser
+handoff and failure address fallback. It adds no backend command, API, session,
+credential/cookie extraction, dependency, service or authentication shortcut.
+The browser retains native sign-in and receiving permissions; `/tools` is a
+separate Main source increment under development and is not claimed deployed.
+
+Author verification is limited to the existing fake-launcher route contract
+extended for this one destination, changed Python compilation and whitespace.
+Exact commands/exits/file digests are retained in the private handoff under
+`/tmp/lfs-pet-manager-*`. The earlier GUI/startup/package evidence above remains
+historical and is not repeated or promoted to exact-new-source acceptance.
+Native GUI interaction, package/install/update/recovery, signing, actual device
+and browser page/authentication availability, the full80 pet requirements and
+sustained integrated use remain **NOT RUN for this increment**. Quiet/focus,
+optional stay-above, minimize/close and original frame behavior are retained.
+MacroPet, Action Loop and Phoenix remain independent held products.
