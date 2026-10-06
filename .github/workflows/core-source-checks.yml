@@ -11,6 +11,10 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - name: Check Linux public navigation contract
+        run: python3 clients/linux/check_contract.py
+      - name: Check Linux shell syntax
+        run: python3 -m py_compile clients/linux/lfs_pet.py clients/linux/navigation.py clients/linux/check_contract.py
       - name: Install pinned Rust toolchain
         run: rustup show
       - name: Check formatting
