@@ -23,10 +23,30 @@ Run from the desktop session, rather than a headless SSH session. Missing
 dependencies or display access produces a diagnostic and the Family Hub URL.
 
 The actual startup check was performed on GTK 3.24 with the available X11
-session. Wayland, other distributions and packaged installation are unqualified.
+session. Wayland, other distributions and actual owner installation are unqualified.
 No systemd unit, automatic login startup, background service or core process is
 started. Closing the widget stops this process; rerun the command to restore it.
 No local data or settings are written by the shell.
+
+## Offline package and per-user menu launcher
+
+The bounded package builder/installer is `clients/linux/package.py`.
+See `clients/linux/PACKAGE.md` in the checkout (`README.md` in the package) for exact offline
+verify/install/update/activate/remove/recover commands, dependency/provenance
+limits and preserved evidence. It packages only this Python GTK shell, fixed
+navigation, the stdlib installer and two guides, with exact source/file digests.
+It does not bundle or launch the Rust core, donor assets, telemetry or credentials.
+Installation adds a normal per-user application-menu entry; no autostart or
+service is added. Closing the original widget remains the normal way to stop it.
+
+Updates retain content-addressed prior versions. Removing the exact managed menu
+entry retains packages and recovery history. Interrupted launcher changes have a
+durable before-state and an explicit recover command. Unfamiliar files, symlinks,
+ownership or edited retained versions cause a visible hold, not an overwrite.
+Desktop Exec uses directly quoted absolute Python/script arguments; paths with
+spaces are included in the disposable check. The bounded path/desktop matrix is
+documented in the package guide. Digests are identity evidence, not signing,
+license clearance, universal portability or production acceptance.
 
 ## Interaction and browser authority
 
@@ -97,8 +117,9 @@ database, listener or second service.
 Final qualification remains open for actual mouse/keyboard interaction;
 screen reader, high contrast, reduced motion and display scaling; desktop
 input/focus containment and system DND behavior; multi-monitor restoration;
-Wayland/window-manager behavior; clean packaging, install/update/remove and
-rollback; code/artwork release licensing; Android physical devices; native
+Wayland/window-manager behavior; actual owner package/install/update/remove and
+rollback acceptance beyond the disposable function journey; code/artwork release
+licensing/signing; Android physical devices; native
 keyring, session revocation and cross-device consent/replay/conflict contracts;
 recovery/export/persistence; full integrated feature coverage and sustained use.
 The drawing imports no donor sprite asset, but project release licensing still

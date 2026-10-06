@@ -11,6 +11,12 @@ session handling or core/telemetry startup. Quiet/focus mode, an opt-in stay-abo
 request, taskbar minimize and close controls are included.
 
 See [Linux launch, dependencies and acceptance limits](docs/LINUX-PET.md).
+An offline allowlisted source package and reversible per-user application-menu
+launcher are now available through [the family package guide](clients/linux/PACKAGE.md).
+Updates preserve prior package versions and recovery history; no dependencies,
+autostart, service, core or browser are installed/started by the installer.
+This source/function increment does not establish owner installation, release
+licensing/signing or universal desktop/distro acceptance.
 Bounded GTK native startup was observed on X11; actual click/keyboard browser
 journeys, package/device/accessibility qualification, native state integration
 and the full planned pet feature set remain open. This staged feature does not
