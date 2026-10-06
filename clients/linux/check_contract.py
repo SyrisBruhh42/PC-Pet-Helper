@@ -7,10 +7,12 @@ from navigation import DESTINATIONS, ORIGIN, open_destination
 def main():
     expected = {
         "hub": "https://lewisfamilysystems.com",
+        "tools": "https://lewisfamilysystems.com/tools",
         "calendar": "https://lewisfamilysystems.com/calendar",
         "workspace": "https://lewisfamilysystems.com/workspace",
         "connections": "https://lewisfamilysystems.com/settings/connections",
     }
+    assert DESTINATIONS["tools"][0] == "LFS tools"
     assert ORIGIN == expected["hub"]
     assert set(DESTINATIONS) == set(expected)
     calls = []
