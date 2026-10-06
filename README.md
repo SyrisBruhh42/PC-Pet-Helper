@@ -1,11 +1,29 @@
 # PC-Pet-Helper — desktop companion candidate
 
+## Linux LFS access shell — staged increment
+
+The existing PC-Pet owner now contains a GTK 3 Linux pet/access window with
+original sage artwork, **Open Family Hub**, and labeled Calendar, Notes &
+Projects and Connections shortcuts. Run `python3 clients/linux/lfs_pet.py`
+from this checkout in your graphical session. Browser sign-in and permissions
+remain authoritative; the pet operates locally without network access, native
+session handling or core/telemetry startup. Quiet/focus mode, an opt-in stay-above
+request, taskbar minimize and close controls are included.
+
+See [Linux launch, dependencies and acceptance limits](docs/LINUX-PET.md).
+Bounded GTK native startup was observed on X11; actual click/keyboard browser
+journeys, package/device/accessibility qualification, native state integration
+and the full planned pet feature set remain open. This staged feature does not
+establish production or end-to-end acceptance. The historical observations below
+describe their dated baselines and remain preserved.
+
 ## Source baseline — 2026-10-04
 
 The canonical source candidate is the current core lineage, based on
 `5d6e686339f61688be6fc7c1801302d325a5aac4`. It contains a standalone
-state/vitals engine, SQLite persistence, and local state broadcast. It does not
-yet display a desktop pet. The aggregate and component branches remain
+state/vitals engine, SQLite persistence, and local state broadcast. That core
+baseline did not display a desktop pet; the staged GTK shell above is a separate
+increment in this same owner. The aggregate and component branches remain
 preserved as unqualified feature material; they have not been merged into this
 candidate. See [source decision and acceptance gaps](docs/SOURCE_BASELINE.md).
 
